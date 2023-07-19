@@ -1,0 +1,83 @@
+.header {
+  position: relative;
+  /* background: url(./Photos/beige-paintbrush-stroke-textured-background.jpg) right no-repeat; */
+  background: url(./Photos/μπαρα.png) center no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.button {
+  display: button-list;
+}
+
+.tablink {
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  background-color: transparent;
+
+  font-size: var(--font-size-d-s);
+  padding: var(--padding-st-s-h) var(--padding-st-s-v);
+  font-family: 'cf_jeckylitalic';
+  cursor: pointer;
+}
+.tablink:hover {
+  color: var(--color-third);
+}
+.header:hover {
+  opacity: 0.9;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+.tablink.active {
+  color: var(--color-third);
+}
+
+@media screen and (max-width: 770px) {
+  .tablink {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 740px) {
+  .tablink {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .tablink {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .tablink {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 440px) {
+  .tablink {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .tablink {
+    font-size: 2.5rem;
+  }
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+  .tablink {
+    font-size: 3rem;
+  }
+}
+
+
+@media screen and (min-width: 1500px) and (max-width: 2500px) {
+  .tablink {
+    font-size: 4rem;
+  }
+}

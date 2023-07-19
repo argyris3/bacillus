@@ -1,0 +1,458 @@
+.details-beers {
+  background: url(./Photos/beige-paintbrush-stroke-textured-background.jpg) center no-repeat;
+  /* padding: var(--padding-d-mc-h) 0 0 0; */
+  padding: var(--padding-d-m-h) 0 0 0;
+  background-size: 2500px 820px;
+}
+
+/* -------ANGLO-AMERICAN--------- */
+/* .details-beers .tabcontents {
+  display: none;
+} */
+
+.swiper-slide {
+  position: relative;
+
+  background: url(./Photos/μπαρα\ πισω\ απο\ εξωφυλλα\ μαυρη.png), url(./Photos/μπαρα\ πισω\ απο\ εξωφυλλα.png),
+    url(./Photos/μπαρα\ πισω\ απο\ εξωφυλλα.png);
+
+  background-position: center, top, bottom;
+  background-size: 2500px 160px;
+  background-repeat: no-repeat;
+
+  /* display: grid;
+
+  grid-template-columns: repeat(12, 1fr);
+
+  gap: 4rem;
+  justify-content: center;
+  align-items: center; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.swiper-slide .title {
+  /* grid-column: 1/3;
+  align-self: center;
+  justify-self: center; */
+  padding-left: 2rem;
+
+  font-size: 2.2rem;
+
+  font-family: 'cf_jeckylitalic';
+  color: var(--color-third);
+  text-transform: uppercase;
+  font-weight: normal;
+  font-style: normal;
+}
+/* .swiper-slide .flex-photos1 {
+  grid-column: 3/5;
+}
+.swiper-slide .flex-photos2 {
+  grid-column: 5/7;
+}
+.swiper-slide .flex-photos3 {
+  grid-column: 7/9;
+}
+.swiper-slide .beer-text {
+  grid-column: 9/-1;
+} */
+.swiper {
+  padding-bottom: 30px !important;
+}
+.flex-photos1,
+.flex-photos2,
+.flex-photos3 {
+  height: 340px;
+  width: 250px;
+  overflow: hidden;
+}
+.beer-text {
+  height: 340px;
+  width: 340px;
+  object-fit: cover;
+
+  overflow: hidden;
+}
+
+.flip-card {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  perspective: 1000px;
+}
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.flip-card .inner {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card .inner .front,
+.flip-card .inner .back {
+  position: absolute;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-family: inherit;
+}
+
+.flip-card .inner .front {
+  background-color: #bbb;
+}
+.flip-card .inner .back {
+  transform: rotateY(180deg);
+}
+.flip-card:hover .inner {
+  transform: rotateY(180deg);
+}
+
+.swiper .swiper-pagination-bullet {
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 0 2px;
+
+  transition: background-color 1s ease;
+}
+.swiper.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0;
+}
+
+.swiper-pagination-bullet:hover {
+  background-color: black;
+}
+.swiper .swiper-pagination-bullet-active {
+  background-color: black;
+}
+
+.tabcontents {
+  display: none;
+}
+.tabcontents.tab--visible {
+  display: grid;
+}
+/* ------1 Card */
+.swiper-slide__1 {
+  position: relative;
+  background: url(./Photos/μπαρα\ πισω\ απο\ εξωφυλλα\ μαυρη.png), url(./Photos/μπαρα\ πισω\ απο\ εξωφυλλα.png),
+    url(./Photos/μπαρα\ πισω\ απο\ εξωφυλλα.png);
+
+  background-position: center, top, bottom;
+  background-size: 2500px 160px;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 5px; */
+}
+.swiper-slide__1 .title {
+  align-self: center;
+
+  padding-left: 2.5rem;
+}
+
+/* -------2 Cards */
+.swiper-slide__2 {
+  position: relative;
+  background: url(./Photos/μπαρα\ πισω\ απο\ εξωφυλλα\ μαυρη.png), url(./Photos/μπαρα\ πισω\ απο\ εξωφυλλα.png),
+    url(./Photos/μπαρα\ πισω\ απο\ εξωφυλλα.png);
+
+  background-position: center, top, bottom;
+  background-size: 2500px 160px;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 5px; */
+}
+.swiper-slide__2 .title {
+  padding-left: 2.5rem;
+  align-self: center;
+}
+/* media queries */
+@media screen and (max-width: 1400px) {
+  .swiper-slide {
+    gap: 30px;
+  }
+  /* .swiper-slide .beer-text {
+    padding-right: 1.5rem;
+  } */
+}
+@media screen and (max-width: 1340px) {
+  /* .swiper-slide .beer-text {
+    padding-right: 1rem;
+  } */
+  .swiper-slide .title {
+    padding-left: 1.5rem;
+  }
+  .flex-photos1,
+  .flex-photos2,
+  .flex-photos3 {
+    height: 300px;
+    width: 230px;
+    overflow: hidden;
+  }
+  .beer-text {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 1240px) {
+  /* .swiper-slide .beer-text {
+    padding-right: 0.5rem;
+  } */
+  .swiper-slide .title {
+    padding-left: 1rem;
+  }
+  .swiper-slide {
+    gap: 35px;
+  }
+
+  .flex-photos1,
+  .flex-photos2,
+  .flex-photos3 {
+    height: 270px;
+    width: 200px;
+    overflow: hidden;
+  }
+  .beer-text {
+    height: 270px;
+    width: 270px;
+    object-fit: cover;
+
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 1140px) {
+  /* .swiper-slide .beer-text {
+    padding-right: 0.2rem;
+  } */
+  .swiper-slide .title {
+    padding-left: 0.5rem;
+    font-size: 2rem;
+  }
+  .swiper-slide {
+    gap: 30px;
+  }
+
+  .flex-photos1,
+  .flex-photos2,
+  .flex-photos3 {
+    height: 250px;
+    width: 180px;
+    overflow: hidden;
+  }
+  .beer-text {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 1040px) {
+  .swiper-slide {
+    background-size: 1800px 120px;
+  }
+  /* .swiper-slide .beer-text {
+    padding-right: 1rem;
+  } */
+  .swiper-slide .title {
+    padding-left: 1.5rem;
+    font-size: 2rem;
+  }
+  .swiper-slide {
+    gap: 30px;
+  }
+
+  .flex-photos1,
+  .flex-photos2,
+  .flex-photos3 {
+    height: 220px;
+    width: 160px;
+    overflow: hidden;
+  }
+  .beer-text {
+    height: 220px;
+    width: 220px;
+    object-fit: cover;
+
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 940px) {
+  .swiper-slide {
+    background-size: 1800px 100px;
+  }
+  /* .swiper-slide .beer-text {
+    padding-right: 1.2rem;
+  } */
+  .swiper-slide .title {
+    padding-left: 1rem;
+    font-size: 1.6rem;
+  }
+  .swiper-slide {
+    gap: 30px;
+  }
+
+  .flex-photos1,
+  .flex-photos2,
+  .flex-photos3 {
+    height: 200px;
+    width: 140px;
+    overflow: hidden;
+  }
+  .beer-text {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+
+    overflow: hidden;
+  }
+  .swiper .swiper-pagination-bullet {
+    height: 9px;
+    width: 9px;
+  }
+}
+@media screen and (max-width: 840px) {
+  .swiper-slide {
+    background-size: 1800px 100px;
+  }
+  /* .swiper-slide .beer-text {
+    padding-right: 1.2rem;
+  } */
+  .swiper-slide .title {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+  }
+  .swiper-slide {
+    gap: 30px;
+  }
+
+  .flex-photos1,
+  .flex-photos2,
+  .flex-photos3 {
+    height: 190px;
+    width: 130px;
+    overflow: hidden;
+  }
+  .beer-text {
+    height: 190px;
+    width: 190px;
+    object-fit: cover;
+
+    overflow: hidden;
+  }
+  .swiper .swiper-pagination-bullet {
+    height: 9px;
+    width: 9px;
+  }
+}
+@media screen and (max-width: 705px) {
+  .details-beers {
+    background: url(./Photos/beige-paintbrush-stroke-textured-background.jpg) center no-repeat;
+    background-size: 2500px 1500px;
+    padding: 0 0 0 0;
+  }
+  .swiper-slide {
+    background-position: top;
+    background-size: 130px 1500px;
+    gap: 15px;
+  }
+  .swiper-slide__1 {
+    background-position: top;
+    background-size: 130px 700px;
+
+    gap: 65px;
+  }
+  .swiper-slide__2 {
+    background-position: top;
+    background-size: 130px 900px;
+    gap: 35px;
+  }
+
+  .swiper-slide,
+  .swiper-slide__1,
+  .swiper-slide__2 {
+    /* background-size: 130px 1500px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .swiper-slide,
+  .swiper-slide__1,
+  .swiper-slide__2.title {
+    padding-top: 1rem;
+  }
+
+  .flex-photos1,
+  .flex-photos2,
+  .flex-photos3 {
+    height: 235px;
+    width: 175px;
+    overflow: hidden;
+  }
+
+  .beer-text {
+    height: 235px;
+    width: 235px;
+    object-fit: cover;
+
+    overflow: hidden;
+  }
+  .swiper .swiper-pagination-bullet {
+    height: 9px;
+    width: 9px;
+  }
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 2500px) {
+  .flex-photos1,
+  .flex-photos2,
+  .flex-photos3 {
+    height: 390px;
+    width: 300px;
+    overflow: hidden;
+  }
+  .beer-text {
+    height: 390px;
+    width: 390px;
+    object-fit: cover;
+
+    overflow: hidden;
+  }
+  .swiper-slide {
+    background-size: 2500px 180px;
+    gap: 10rem;
+  }
+  .swiper-slide .title {
+    font-size: 2.6rem;
+  }
+  .details-beers {
+    background: url(./Photos/beige-paintbrush-stroke-textured-background.jpg) center repeat;
+    padding: var(--padding-d-mc-v) 0 var(--padding-d-mc-h) 0;
+    background-size: 2500px 1500px;
+  }
+}
